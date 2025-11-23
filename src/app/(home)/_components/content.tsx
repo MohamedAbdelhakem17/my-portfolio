@@ -2,7 +2,7 @@ import SocialLinks from "./social-links";
 
 export default function Content() {
   return (
-    <div className="col-span-full lg:col-span-1 lg:order-1 order-2 lg:p-6 p-2 space-y-4 lg:text-left text-center">
+    <div className="col-span-full lg:col-span-1 lg:order-1 order-2 lg:p-6 p-2 space-y-4 lg:text-left text-center flex flex-col justify-center">
       {/* Title */}
       <p className="font-bold text-lg lg:text-xl">Software Developer</p>
 

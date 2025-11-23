@@ -71,4 +71,12 @@
   body {
     @apply bg-primary text-white font-main leading-loose;
   }
+
+  .service-number {
+    -webkit-text-stroke: 2px rgb(75, 85, 99);
+  }
+
+  .group:hover .service-number {
+    -webkit-text-stroke: 2px #00ff99;
+  }
 }

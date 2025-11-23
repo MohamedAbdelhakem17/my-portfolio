@@ -11,5 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
-  return <div>WorkPage</div>;
+  return (
+    <section className="grid grid-cols-1 lg:grid-cols-2 lg:pt-8 lg:pb-12 lg:gap-6 gap-3 place-content-center min-h-screen">
+      Work Page
+    </section>
+  );
 }

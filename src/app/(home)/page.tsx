@@ -1,3 +1,4 @@
+import PageWrapper from "@/components/common/page-wrapper";
 import { Metadata } from "next";
 import Photo from "./_components/_photo";
 import Content from "./_components/content";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 lg:pt-8 lg:pb-12 lg:gap-6 gap-3 place-content-center min-h-screen">
+    <PageWrapper>
       {/* Content */}
       <Content />
 
@@ -26,6 +27,6 @@ export default function Home() {
 
       {/* Statistics */}
       <Statistics />
-    </section>
+    </PageWrapper>
   );
 }
