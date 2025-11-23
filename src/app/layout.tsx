@@ -7,7 +7,7 @@ import "./globals.css";
 
 // Fonts
 const monoFont = JetBrains_Mono({
-  subsets: ["latin-ext"],
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-jetbrainsMono",
 });
