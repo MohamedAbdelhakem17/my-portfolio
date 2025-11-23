@@ -11,7 +11,7 @@ export default function PageWrapper({
   return (
     <section
       className={cn([
-        "grid grid-cols-1 lg:grid-cols-2 lg:pt-8 lg:pb-12 lg:gap-6 gap-3 place-content-center min-h-screen",
+        "grid grid-cols-1 lg:grid-cols-2 lg:pt-4 lg:pb-4 lg:gap-4 gap-3 place-content-center min-h-screen",
         className,
       ])}
       {...rest}

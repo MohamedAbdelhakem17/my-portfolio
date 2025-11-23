@@ -5,7 +5,7 @@ import MobilNavbar from "./_components/mobil-navbar";
 export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0">
-      <div className="container py-8 xl:py-10 flex items-center justify-between">
+      <div className="container py-5 xl:py-6 flex items-center justify-between">
         {/* Logo */}
         <Logo />
 
