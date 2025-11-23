@@ -8,7 +8,7 @@ export default function AnimatedStaggerParent({
   className,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) {
   const parent: Variants = {
     hidden: {},
