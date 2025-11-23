@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import NAVIGATION_LINKS from "@/lib/constants/navigation.constants";
-import Link from "next/link";
+import HireMeButton from "./hire-me-button";
 import NavbarLink from "./navbar-link";
 
 export default function DesktopNavbar() {
@@ -15,9 +14,7 @@ export default function DesktopNavbar() {
       })}
 
       {/* Hire me action */}
-      <Button>
-        <Link href="/contact">Hire me</Link>
-      </Button>
+      <HireMeButton />
     </nav>
   );
 }

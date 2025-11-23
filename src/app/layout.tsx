@@ -1,3 +1,5 @@
+import PageTransition from "@/components/feathers/page-transition";
+import StairTransition from "@/components/feathers/stair-transition";
 import Navbar from "@/components/layout/navbar";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
@@ -54,8 +56,8 @@ export default function RootLayout({
               url: "https://your-domain.com",
               jobTitle: "Full-Stack Developer",
               sameAs: [
-                "https://github.com/your-profile",
-                "https://linkedin.com/in/your-profile",
+                "https://github.com/MohamedAbdelhakem17",
+                "www.linkedin.com/in/mohamedabdelhakem",
               ],
             }),
           }}
@@ -65,8 +67,13 @@ export default function RootLayout({
         {/* Header */}
         <Navbar />
 
+        {/* Animation transition */}
+        <StairTransition />
+
         {/* Content */}
-        {children}
+        <PageTransition>
+          <main className="container">{children}</main>
+        </PageTransition>
       </body>
     </html>
   );
