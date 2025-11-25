@@ -1,8 +1,8 @@
 const RESUME_TABS = {
   EXPERIENCE: "Experience",
   EDUCATION: "Education",
-  ABOUT_ME: "About me",
   SKILLS: "Skills",
+  ABOUT_ME: "About me",
 } as const;
 
 export type TabType = keyof typeof RESUME_TABS;

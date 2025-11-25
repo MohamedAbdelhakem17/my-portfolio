@@ -1,4 +1,4 @@
-import SocialLinks from "./social-links";
+import SocialLinks from "@/components/feathers/social-links";
 
 export default function Content() {
   return (

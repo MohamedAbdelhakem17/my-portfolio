@@ -1,8 +1,8 @@
-import { Facebook, Github, Linkedin } from "lucide-react";
+import { Facebook, Github, Linkedin, MessageCircleMore } from "lucide-react";
 
 // Type
 export type SocialLink = {
-  label: "Linkedin" | "Facebook" | "Github";
+  label: "Linkedin" | "Facebook" | "Github" | "Whatsapp";
   link: string;
   Icon: typeof Linkedin;
 };
@@ -17,6 +17,11 @@ const SOCIAL_LINKS: SocialLink[] = [
     label: "Linkedin",
     link: "www.linkedin.com/in/mohamedabdelhakem",
     Icon: Linkedin,
+  },
+  {
+    label: "Whatsapp",
+    link: "https://www.facebook.com/mohamed.abdelhakem.9693/",
+    Icon: MessageCircleMore,
   },
   {
     label: "Facebook",
