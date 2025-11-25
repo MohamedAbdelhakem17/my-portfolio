@@ -23,7 +23,7 @@ export default function ContactPage() {
         </ResumeHeading.title>
 
         {/* Message */}
-        <ResumeHeading.description className="text-pretty leading-relaxed">
+        <ResumeHeading.description className="text-pretty leading-relaxed border-b border-gray-50/20 pb-4  rounded-md">
           Have an idea or a project you&apos;d like to discuss? I’d love to hear
           from you. Let’s create something great together.
         </ResumeHeading.description>
