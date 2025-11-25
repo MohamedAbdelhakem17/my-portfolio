@@ -6,16 +6,18 @@ import React from "react";
 export default function AnimatedStaggerParent({
   children,
   className,
+  delay = 1.5,
 }: {
   children: React.ReactNode;
   className?: string;
+  delay?: number;
 }) {
   const parent: Variants = {
     hidden: {},
     show: {
       transition: {
         staggerChildren: 0.12,
-        delayChildren: 1.5,
+        delayChildren: delay,
       },
     },
   };
