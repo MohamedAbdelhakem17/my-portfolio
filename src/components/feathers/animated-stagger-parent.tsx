@@ -1,17 +1,19 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { HTMLMotionProps, motion, Variants } from "framer-motion";
 import React from "react";
+
+export interface AnimatedStaggerParentProps extends HTMLMotionProps<"div"> {
+  children?: React.ReactNode;
+  delay?: number;
+}
 
 export default function AnimatedStaggerParent({
   children,
   className,
   delay = 1.5,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}) {
+  ...rest
+}: AnimatedStaggerParentProps): JSX.Element {
   const parent: Variants = {
     hidden: {},
     show: {
@@ -53,6 +55,7 @@ export default function AnimatedStaggerParent({
       initial="hidden"
       animate="show"
       className={className}
+      {...rest}
     >
       {Array.isArray(children) ? (
         children.map((childNode, i) => (

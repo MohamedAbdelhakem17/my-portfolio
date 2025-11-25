@@ -1,3 +1,4 @@
+import AnimatedStaggerParent from "@/components/feathers/animated-stagger-parent";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Tooltip,
@@ -23,7 +24,10 @@ export default function SkillsTab() {
 
       <ScrollArea className="h-96 w-full p-2 mt-5 lg:mt-10">
         <TooltipProvider delayDuration={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <AnimatedStaggerParent
+            delay={0}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
             {SKILLS.map(({ name, icon: Icon }: SkillType) => (
               <Tooltip key={name}>
                 <TooltipTrigger
@@ -39,7 +43,7 @@ export default function SkillsTab() {
                 </TooltipContent>
               </Tooltip>
             ))}
-          </div>
+          </AnimatedStaggerParent>
         </TooltipProvider>
       </ScrollArea>
     </>

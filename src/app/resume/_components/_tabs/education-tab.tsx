@@ -19,7 +19,7 @@ export default function EducationTab() {
       <ScrollArea className="h-96 w-full p-2 mt-5 lg:mt-10">
         <ResumeContainer>
           {EDUCATION.map((item: EducationType, index: number) => (
-            <ResumeContainer.ResumeCard key={index}>
+            <ResumeContainer.ResumeCard key={index} className="h-full">
               <ResumeContainer.duration>
                 {item.duration}
               </ResumeContainer.duration>

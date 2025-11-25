@@ -1,31 +1,39 @@
+import AnimatedStaggerParent, {
+  AnimatedStaggerParentProps,
+} from "@/components/feathers/animated-stagger-parent";
 import { cn } from "@/lib/utils/cn";
 
 export default function ResumeContainer({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>): JSX.Element {
+}: AnimatedStaggerParentProps): JSX.Element {
   return (
-    <div
+    <AnimatedStaggerParent
+      delay={0}
       className={cn(" grid grid-cols-1 lg:grid-cols-2 gap-4 ", className)}
       {...props}
-    />
+    >
+      {props.children}
+    </AnimatedStaggerParent>
   );
 }
 
-ResumeContainer.ResumeCard = ({
+ResumeContainer.ResumeCard = (({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>): JSX.Element => {
+}: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={cn(
-        " py-6 bg-[#232329] px-10 rounded-xl flex flex-col items-center justify-between lg:items-start gap-1 hover:border-b ease-in-out transition-all hover:border-accent ",
+        "py-6 bg-[#232329] px-10 rounded-xl flex flex-col items-center justify-between lg:items-start gap-1 hover:border-b ease-in-out transition-all hover:border-accent",
         className
       )}
       {...props}
     />
   );
-};
+}) as React.FC<React.HTMLAttributes<HTMLDivElement>>;
+
+ResumeContainer.ResumeCard.displayName = "ResumeCard";
 
 ResumeContainer.title = ({
   className,
