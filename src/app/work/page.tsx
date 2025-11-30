@@ -1,4 +1,6 @@
+import PageWrapper from "@/components/common/page-wrapper";
 import { Metadata } from "next";
+import ProjectSlider from "./_components/project-slider";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -12,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 lg:pt-8 lg:pb-12 lg:gap-6 gap-3 place-content-center min-h-screen">
-      Work Page
-    </section>
+    <PageWrapper className="mt-20 lg:mt-0 lg:grid-cols-1">
+      <ProjectSlider />
+    </PageWrapper>
   );
 }
