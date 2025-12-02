@@ -29,7 +29,7 @@ const PROJECTS: ProjectType[] = [
       "Express",
       "Mongoose",
     ],
-    image: "/images/test.png",
+    image: "/images/goocast.png",
     links: [
       {
         name: "Github",
@@ -53,7 +53,7 @@ const PROJECTS: ProjectType[] = [
       "Express",
       "Mongoose",
     ],
-    image: "/images/test.png",
+    image: "/images/scarabio.png",
     links: [
       {
         name: "Github",
@@ -61,6 +61,41 @@ const PROJECTS: ProjectType[] = [
         icon: Github,
       },
       { name: "Live", link: "https://scarabio.com", icon: MoveUpRight },
+    ],
+  },
+  {
+    type: "WordPress Website",
+    name: "Yes Elite Clinics Website",
+    description:
+      "The official website of Yes Elite Clinics — a cosmetic and plastic surgery clinic offering body contouring, dermatology, and aesthetic services. The site showcases services, branches, contact information, and online booking features, serving as a comprehensive digital presence for the clinic in Egypt.",
+    stack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+    image: "/images/yeseliteclinicsbook.png",
+    links: [
+      {
+        name: "Live",
+        link: "https://yeseliteclinicsbook.com",
+        icon: MoveUpRight,
+      },
+    ],
+  },
+  {
+    type: "Front End",
+    name: "Alufq Alwaed Website",
+    description:
+      "The official website of Alufq Alwaed — a professional platform showcasing services, news, and resources. Built with modern front-end technologies for responsive and interactive user experience.",
+    stack: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    image: "/images/alufqalwaed.png",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/MohamedAbdelhakem17/Alufq-Alwaed",
+        icon: Github,
+      },
+      {
+        name: "Live",
+        link: "https://www.alufqalwaed.com/",
+        icon: MoveUpRight,
+      },
     ],
   },
 ];
