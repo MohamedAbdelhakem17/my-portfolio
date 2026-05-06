@@ -51,10 +51,12 @@ export default function MobilNavbar() {
           {/* Links */}
           <div className="my-2 flex flex-col items-start gap-y-5 w-full">
             {NAVIGATION_LINKS?.map(({ href, label }) => (
-              // navigation link
-              <div key={href} onClick={() => setOpen(false)} className="w-fit">
-                <NavbarLink href={href} label={label} />
-              </div>
+              <NavbarLink
+                key={href}
+                href={href}
+                label={label}
+                onClick={() => setOpen(false)}
+              />
             ))}
 
             {/* Hire me action */}

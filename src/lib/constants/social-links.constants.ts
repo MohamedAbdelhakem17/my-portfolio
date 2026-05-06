@@ -15,12 +15,12 @@ const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: "Linkedin",
-    link: "www.linkedin.com/in/mohamedabdelhakem",
+    link: "https://www.linkedin.com/in/mohamedabdelhakem",
     Icon: Linkedin,
   },
   {
     label: "Whatsapp",
-    link: "https://www.facebook.com/mohamed.abdelhakem.9693/",
+    link: "https://wa.me/?text=Hello%20Mohamed",
     Icon: MessageCircleMore,
   },
   {

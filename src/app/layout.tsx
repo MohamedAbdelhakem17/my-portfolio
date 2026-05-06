@@ -1,6 +1,7 @@
 import PageTransition from "@/components/feathers/page-transition";
 import StairTransition from "@/components/feathers/stair-transition";
 import Navbar from "@/components/layout/navbar";
+import { SITE_URL } from "@/lib/constants/site-url.constant";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -14,7 +15,7 @@ const monoFont = JetBrains_Mono({
 
 // Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "M. Abdelhakem| Full-Stack Developer",
     template: "%s | M. Abdelhakem",
@@ -53,11 +54,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Mohamed Abdelhakem",
-              url: "https://your-domain.com",
+              url: SITE_URL,
               jobTitle: "Full-Stack Developer",
               sameAs: [
                 "https://github.com/MohamedAbdelhakem17",
-                "www.linkedin.com/in/mohamedabdelhakem",
+                "https://www.linkedin.com/in/mohamedabdelhakem",
               ],
             }),
           }}

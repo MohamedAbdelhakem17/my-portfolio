@@ -12,10 +12,22 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, User } from "lucide-react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
+type ContactFormValues = {
+  first_name: string;
+  last_name: string;
+  email: string;
+  message: string;
+};
+
+const CONTACT_EMAIL = "mohamed.abdelhakem3200@gmail.com";
+
 export default function ContactForm() {
-  const form = useForm({
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const form = useForm<ContactFormValues>({
     defaultValues: {
       first_name: "",
       last_name: "",
@@ -24,9 +36,33 @@ export default function ContactForm() {
     },
   });
 
+  const onSubmit = ({
+    first_name,
+    last_name,
+    email,
+    message,
+  }: ContactFormValues) => {
+    const subject = encodeURIComponent(
+      `Contact request from ${first_name} ${last_name}`.trim(),
+    );
+    const body = encodeURIComponent(
+      `Name: ${first_name} ${last_name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    );
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setSubmitMessage(
+      "Your email draft is ready. Please send it from your mail app.",
+    );
+    form.reset();
+  };
+
   return (
     <Form {...form}>
-      <form className="grid grid-cols-1 lg:grid-cols-2 gap-3" autoComplete="on">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-3"
+        autoComplete="on"
+      >
         {/* First Name */}
         <FormField
           control={form.control}
@@ -146,10 +182,20 @@ export default function ContactForm() {
           <Button
             type="submit"
             className="transition-transform flex items-center gap-2"
+            disabled={form.formState.isSubmitting}
           >
             <Mail size={20} /> Send It! Let’s Make Magic
           </Button>
         </div>
+
+        {submitMessage && (
+          <p
+            className="col-span-full text-center text-sm text-accent"
+            aria-live="polite"
+          >
+            {submitMessage}
+          </p>
+        )}
       </form>
     </Form>
   );

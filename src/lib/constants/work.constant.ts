@@ -41,6 +41,29 @@ const PROJECTS: ProjectType[] = [
   },
   {
     type: "Full Stack",
+    name: "Goocast Media Production Website",
+    description:
+      "A modern corporate website for a full-service media production company, showcasing studio spaces, production services, and portfolio work. The platform highlights Goocast end-to-end production capabilities with a seamless user journey and an integrated smart booking flow.",
+    stack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "Mongoose",
+    ],
+
+    image: "/images/goocast-website.png",
+    links: [
+      {
+        name: "Live",
+        link: "https://goocast.net/",
+        icon: MoveUpRight,
+      },
+    ],
+  },
+  {
+    type: "Full Stack",
     name: "Scarabio Analyze Tool",
     description:
       "Scarabio On-Page Audit Tool quickly analyzes your web pages from an Excel or CSV upload, checking keywords, schema, headings, and other SEO factors to help improve search visibility.",

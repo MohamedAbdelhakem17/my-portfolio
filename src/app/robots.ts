@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/constants/site-url.constant";
+
 export default function robots() {
   return {
     rules: [
@@ -6,6 +8,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://your-domain.com/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
